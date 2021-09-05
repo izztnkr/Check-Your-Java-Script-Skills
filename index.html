@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="../Check-Your-Java-Script-Skills/assets/css/styles.css">
-    
+    <script src="../Check-Your-Java-Script-Skills/assets/js/script.js"> </script>
+
     <title>JavaScript Quiz</title>
 </head>
 
@@ -15,22 +16,45 @@
 </header>
 
 <body style="background: linear-gradient(100deg, #5cbfe6 10%, #95ebb6 100%)">
-    <div class="card" style= "background-color: #c4e3f0 ; text-align: center;">
-        <h5 class="card-header" style="text-align: center;">A Quiz</h5>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <button type="button" class="btn btn-secondary"><h4> Start Quiz  💻</h4></button>
+    <div class="card" style= "background-color: #c4e3f0 ;">
+        <h5 class="card-header" id="timer" style="text-align: right;">Time = ⏰</h5>
+        <div class="quiz-container" id="quiz">
+          <h3 class="question" id="question" style="text-align: center;">Good Luck!</h3>
+          <ul style= "list-style-type: none; text-align: left;" class="answer-options">
+            <li>
+                <input type="radio" name="answer" class="answer" id="a">
+                <label class="a" id="a_text"></label>  
+            </li>
+            <li>
+                <input type="radio" name="answer" class="answer" id="b">
+                <label class="b" id="b_text"></label> 
+            </li>
+            <li>
+                <input type="radio" name="answer" class="answer" id="c">
+                <label class="c" id="c_text"></label> 
+            </li>
+            <li>
+                <input type="radio" name="answer" class="answer" id="d">
+                <label class="d" id="d_text"></label> 
+            </li>               
+          </ul>  
         </div>
+        <button type="button" class="btn btn-secondary" style="text-align: center;" id="submitbutton"> Start Quiz  </button>
       </div>
     <div style="text-align: center;">
-        timer countdown here
+        Your Score: 
     </div>
 </body>
 
 <footer>
-    <h4 style="text-align: center;"> made with 💚 by IzzTnkr 🧠</h4   > 
+    <h5 style="text-align: center;"> made with 💚 by IzzTnkr 🧠</h5> 
 </footer>
 </html>
-<!-- link js file here-->
-    
+
+<script>
+    var submitBtn = document.getElementById("submitbutton");
+
+// submit button click event listnr//
+submitBtn.addEventListener("click", function(){
+    alert("BOO!");});
+</script>
