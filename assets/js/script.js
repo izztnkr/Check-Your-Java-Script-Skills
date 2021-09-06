@@ -1,5 +1,5 @@
 
-var userTurn
+var userData = document.getElementById("user-high-score");
 var startingTime = 5
 //target quiz items//
 var quiz = document.getElementById("quiz");
@@ -131,13 +131,17 @@ submitBtn.addEventListener("click",(countdown) => {
             loadQuiz()
          } else {
           //display end of game message and score//
-          quiz.innerHTML=  "Game Over! You answered "  + score + " / " + quizData.length + " questions correctly. "
-        //   <button onclick ="location.reload()">Reload</button>
-         //   alert("Game Over! Your answered " + score + "/" + quizData.length +" questions correctly")
+        //   var Data = <input type='text' name='name'>
+
+          quiz.innerHTML=
+           prompt("Game over! Please enter your name.","");
+               
+            
          }
     }
 });
 
+//"Game Over! Your answered " + score + "/" + quizData.length +" questions correctly")
 //store a score
 //display a score
 //have a timer
