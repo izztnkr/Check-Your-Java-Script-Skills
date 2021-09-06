@@ -4,9 +4,8 @@
 HTML, CSS, JS &nbsp;&nbsp;
 
 ## Preview:
- &nbsp;&nbsp;
-  &nbsp;&nbsp;
- ![image](https://media0.giphy.com/media/lNY0a9aJgFcCaDn1nw/giphy.gif?cid=ecf05e47wvh130c7m518bgws5o2j1fq8180fncsd80elyi6i&rid=giphy.gif&ct=g)
+![image](https://user-images.githubusercontent.com/86173119/132159508-20bd1ca8-797d-4efc-8200-5bd8b028c5f1.png)
+
    
 
 
@@ -28,3 +27,4 @@ HTML, CSS, JS &nbsp;&nbsp;
 Quiz content by W3Schools. Visit https://www.w3schools.com/js/js_quiz.asp for further study. 
 
 ## Link to deployed application
+https://izztnkr.github.io/Check-Your-Java-Script-Skills/
