@@ -1,4 +1,4 @@
-var score = 0
+
 var userTurn
 var startingTime = 5
 //target quiz items//
@@ -11,23 +11,6 @@ var c_text = document.getElementById("c_text");
 var d_text = document.getElementById("d_text");
 var submitBtn = document.getElementById("submitbutton");
     
-//have a timer//
-var startingTime = 5
-let time = startingTime * 60;
-var countdownEl = document.getElementById("timer");
-
-//update it every second// 
-setInterval (updateTimer, 1000);
-
-function updateTimer (){
-    var minutes = Math.floor(time/60);
-    var seconds = time % 60;
-    seconds = seconds < 5 ? '0' + seconds : seconds;
-    countdownEl.innerHTML = minutes + " : " + seconds; 
-    time --;
-}
-
-// var dateObjectName = new Date();
  
 //dynamically display questions/answer options within card//
 var quizData = [
@@ -133,7 +116,6 @@ submitBtn.addEventListener("click",(countdown) => {
         countdownEl.innerHTML = minutes + " : " + seconds; 
         time --;
 }
-
      
       var answer = getSelected()
       //check answer//
@@ -149,7 +131,9 @@ submitBtn.addEventListener("click",(countdown) => {
             loadQuiz()
          } else {
           //display end of game message and score//
-          alert("Game Over! Your answered " + (score) + "/" + (quizData.length) +" questions correctly")
+          quiz.innerHTML=  "Game Over! You answered "  + score + " / " + quizData.length + " questions correctly. "
+        //   <button onclick ="location.reload()">Reload</button>
+         //   alert("Game Over! Your answered " + score + "/" + quizData.length +" questions correctly")
          }
     }
 });
