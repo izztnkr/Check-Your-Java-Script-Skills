@@ -118,6 +118,22 @@ function getSelected(){
 
 // submit button click event listnr//
 submitBtn.addEventListener("click",(countdown) => {
+        //have a timer//
+    var startingTime = 5
+    let time = startingTime * 60;
+    var countdownEl = document.getElementById("timer");
+
+    //update it every second// 
+    setInterval (updateTimer, 1000);
+
+    function updateTimer (){
+        var minutes = Math.floor(time/60);
+        var seconds = time % 60;
+        seconds = seconds < 5 ? '0' + seconds : seconds;
+        countdownEl.innerHTML = minutes + " : " + seconds; 
+        time --;
+}
+
      
       var answer = getSelected()
       //check answer//
