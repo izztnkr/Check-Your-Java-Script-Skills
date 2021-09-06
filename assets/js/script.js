@@ -9,25 +9,21 @@ var a_text = document.getElementById("a_text");
 var b_text = document.getElementById("b_text");
 var c_text = document.getElementById("c_text");
 var d_text = document.getElementById("d_text");
-// var submitBtn = document.getElementById("submitbutton");
-
-// // submit button click event listnr//
-// submitBtn.addEventListener("click", function(){
-//     alert("BOO!");});
+var submitBtn = document.getElementById("submitbutton");
     
 //have a timer//
 // var dateObjectName = new Date();
 
 //dynamically display questions/answer options within card//
 var quizData = [
-    // {
-    //     question:"Good Luck!",
-    //     a: "",
-    //     b: "",
-    //     c: "",
-    //     d: "",
-    //     correct: "",
-    // }
+     {
+          question:"Good Luck!",
+          a: "",
+          b: "Start Quiz",
+          c: "",
+          d: "",
+          correct: "Start Quiz",
+    },
     {
         question: "Inside which HTML element do we put the JavaScript?",
         a: "<JavaScript>",
@@ -71,16 +67,6 @@ var quizData = [
     }
 ]
 
-//target quiz items//
-// var quiz = document.getElementById("quiz")
-// var answerEls = document.querySelectorAll(".answer")
-// var questionEl = document.getElementById("question")
-// var a_text = document.getElementById("a_text")
-// var b_text = document.getElementById("b_text")
-// var c_text = document.getElementById("c_text")
-// var d_text = document.getElementById("d_text")
-// var submitBtn = document.getElementById("submitbutton")
-    
 
 
 //Start quiz machine//
@@ -104,38 +90,37 @@ function deselectAnswers(){
     answerEls.forEach(answerEl => answerEl.checked = false);
 }
 
-// var submitBtn = document.getElementById("submitbutton");
+function getSelected(){
+    let answer
+    answerEls.forEach(answerEl =>{
+        if (answerEl.checked){
+            answer = answerEl.id;
+        } 
+    })
+    return answer
+}
 
-// // submit button click event listnr//
-// submitBtn.addEventListener("click", function(){
-//     alert("BOO!");});
 
 // submit button click event listnr//
-// submitBtn.addEventListener("click") {
-//     window.alert("boo!")
-//     console.log(this)
-// }
- 
-    
-    // var answer = getSelected()
-    // //check answer//
-    // if(answer){
-    //     if(answer === quizData[currentQuiz].correct){
-    //     //update score//
-    //         score++
-    //     }
-    //     //go to next question//
-    //     currentQuiz++
+submitBtn.addEventListener("click",() => { 
+      var answer = getSelected()
+      //check answer//
+      if(answer){
+          if(answer === quizData[currentQuiz].correct){
+          //update score//
+              score++
+         }
+          //go to next question//
+          currentQuiz++
 
-    //     if(currentQuiz< quizData.length){
-    //         loadQuiz()
-    //     }else{
-    //     //display end of game message and score//
-    //     quiz.innerHTML =
-    //     <h2>Game Over!</h2>
-    //     }
-//     }
-// }
+          if(currentQuiz< quizData.length){
+            loadQuiz()
+         } else {
+          //display end of game message and score//
+          alert("Game Over! Your answered " + (score) + "/" + (quizData.length) +" questions correctly")
+         }
+    }
+});
 
 //store a score
 //display a score
